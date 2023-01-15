@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Logic</title>
+  <style>
+body {
+  background-color: #f5f5f5;
+}
+
+
+body {
+    text-align: center;}
+
+    header {
+      font-family: Helvetica, sans-serif;
+      background-color: #ebebeb; /* a warm orange color */
+      padding: 20px;
+      align-items: center;
+    }
+    
+    header h1 {
+      font-family: Helvetica, sans-serif;
+      color: rgb(0, 0, 0);
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* gives a subtle shadow effect */
+      margin: 0;
+    }
+    
+    p {
+
+      
+      font-family: 'Bentham';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 130%;
+      /* or 83px */
+      
+      align-items: center;
+      
+      color: #c49c48;    
+  border-color: 1px solid rgba(167, 167, 167, 0.9);
+  border-radius: 10px;
+  text-shadow: 0px 4px 5px rgba(130, 130, 130, 0.9);
+      /* Inside auto layout */
+      
+      flex: none;
+      order: 0;
+      flex-grow: 1;
+    }
+
+    p2 {
+
+      
+      font-family: 'Bentham';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 130%;
+      /* or 83px */
+      
+      align-items: center;
+      
+      color: #c49c48;    
+  border-color: 1px solid rgba(167, 167, 167, 0.9);
+  border-radius: 10px;
+  text-shadow: 0px 4px 5px rgba(130, 130, 130, 0.9);
+      /* Inside auto layout */
+      
+      flex: none;
+      order: 0;
+      flex-grow: 1;
+    }
+
+
+
+
+
+
+    header {
+      font-family: Helvetica, sans-serif;
+      background-color: white;
+    }
+
+
+   /* CSS code for styling form, label, textarea and button */
+   .form-container {
+  display: contents;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-field {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  font-size: 16px;
+  position: relative;
+  text-indent: 0;
+  box-sizing: border-box;
+}
+
+label {
+  font-family: 'Bentham';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%; /* or 83px */
+  color: #c49c48;    
+  border-color: 1px solid rgba(167, 167, 167, 0.9);
+  border-radius: 10px;
+  text-shadow: 0px 4px 5px rgba(130, 130, 130, 0.9);
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+textarea {
+  border: none; /* remove the border */
+  padding: 10px; /* adjust the padding */
+  font-size: 12px; /* keep the font size */
+  resize: none; /* keep the textarea non-resizable */
+  text-indent: 0; /* keep the text aligned to the left */
+  box-sizing:border-box; /* keep the textarea including padding and border in the total width and height */
+  background-color: #ebebeb; /* add a light background color */
+  font-family: Arial, sans-serif; /* change the font */
+  line-height: 1.5; /* adjust the line height */
+  border-radius: 4px; /* add rounded corners */
+  width: 80%; /* make the textarea take up 60% of its container width */
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); /* add a subtle box shadow */
+  margin: 0 auto; /* center the textarea horizontally */
+  display: block;
+  margin-top: 10px;
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    box-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    font-family: 'Bentham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%; /* identical to box height, or 26px */
+    color: #000000;
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+  
+button:hover {
+  background-color: #c49c48;
+}
+
+button:active {
+  background-color: #ffffff;
+}
+
+button:focus {
+  outline: none;
+}
+
+input{
+  border: none; /* remove the border */
+  padding: 10px; /* adjust the padding */
+  font-size: 12px; /* keep the font size */
+  resize: none; /* keep the textarea non-resizable */
+  text-indent: 0; /* keep the text aligned to the left */
+  box-sizing:border-box; /* keep the textarea including padding and border in the total width and height */
+  background-color: #ebebeb; /* add a light background color */
+  font-family: Arial, sans-serif; /* change the font */
+  line-height: 1.5; /* adjust the line height */
+  border-radius: 4px; /* add rounded corners */
+  width: 30%; /* make the textarea take up 60% of its container width */
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); /* add a subtle box shadow */
+  margin: 0 auto; /* center the textarea horizontally */
+  display: block;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <p>Logic</p>
+  <p2>Wie kann man die Intention einer Person ableiten?</p2>
+  <form
+  action="https://formspree.io/f/xwkjpeyo"
+  method="POST"
+>
+
+  <label>
+    Deine Antwort:
+    <textarea name="message" id="myTextArea"></textarea>
+  </label>
+  <label>
+    E-Mail Adresse: 
+    </label>
+    <input type="email" name="email">
+  </label>
+
+  <!-- your other form fields go here -->
+  <button type="submit">✉</button>
+  </button>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var textarea = document.getElementById("myTextArea");
+    textarea.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = (this.scrollHeight) + 'px';
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Emotion</title>
+    <style>
+body {
+    text-align: center;
+    background: rgb(121,2,2);
+background: linear-gradient(90deg, rgba(121,2,2,1) 0%, rgba(253,29,29,1) 66%, rgba(252,82,69,1) 100%);
+  }
+
+
+body {
+    text-align: center;}
+
+    header {
+      font-family: Helvetica, sans-serif;
+      background-color: #ebebeb; /* a warm orange color */
+      padding: 20px;
+      align-items: center;
+    }
+    
+    header h1 {
+      font-family: Helvetica, sans-serif;
+      color: rgb(0, 0, 0);
+      font-size: 48px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* gives a subtle shadow effect */
+      margin: 0;
+    }
+    
+    p {
+
+      
+    font-family:Georgia, 'Times New Roman', Times, serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 64px;
+      line-height: 130%;
+      /* or 83px */
+      
+      align-items: center;
+      
+      color: #ffffff;    
+  border-color: 1px solid rgba(167, 167, 167, 0.9);
+  border-radius: 10px;
+  text-shadow: 0px 4px 5px rgba(130, 130, 130, 0.9);
+      /* Inside auto layout */
+      
+      flex: none;
+      order: 0;
+      flex-grow: 1;
+    }
+
+    p2 {
+
+      
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      /* or 83px */
+      
+      align-items: center;
+      
+      color: #ffffff;    
+  border-color: 1px solid rgba(167, 167, 167, 0.9);
+  border-radius: 10px;
+  text-shadow: 0px 4px 5px rgba(130, 130, 130, 0.9);
+      /* Inside auto layout */
+      
+      flex: none;
+      order: 0;
+      flex-grow: 1;
+    }
+
+
+
+
+
+
+    header {
+      font-family: Helvetica, sans-serif;
+      background-color: white;
+    }
+
+
+   /* CSS code for styling form, label, textarea and button */
+   .form-container {
+  display: contents;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-field {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  font-size: 16px;
+  position: relative;
+  text-indent: 0;
+  box-sizing: border-box;
+}
+
+label {
+  font-family: 'Bentham';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%; /* or 83px */
+  color: #ffffff;    
+  border-color: 1px solid rgba(167, 167, 167, 0.9);
+  border-radius: 10px;
+  text-shadow: 0px 4px 5px rgba(130, 130, 130, 0.9);
+  display: block;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+textarea {
+  border: none; /* remove the border */
+  padding: 10px; /* adjust the padding */
+  font-size: 10px; /* keep the font size */
+  resize: none; /* keep the textarea non-resizable */
+  text-indent: 0; /* keep the text aligned to the left */
+  box-sizing:border-box; /* keep the textarea including padding and border in the total width and height */
+  background-color: #ebebeb; /* add a light background color */
+  font-family: Arial, sans-serif; /* change the font */
+  line-height: 1.5; /* adjust the line height */
+  border-radius: 4px; /* add rounded corners */
+  width: 80%; /* make the textarea take up 60% of its container width */
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); /* add a subtle box shadow */
+  margin: 0 auto; /* center the textarea horizontally */
+  display: block;
+  margin-top: 10px;
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background: #ffffff;
+    box-shadow: 2px 2px 4px #000000;
+    cursor: pointer;
+    width: 50px;
+    height: 30px;
+    font-family: 'Bentham';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%; /* identical to box height, or 26px */
+    color: #000000;
+    position: fixed;
+    right: 8px;
+    bottom: 100px;
+    left: 50%;
+    top: 1350px;
+    transform: translate(-50%, -50%);
+}
+  
+button:hover {
+  background-color: #c49c48;
+}
+
+button:active {
+  background-color: #ffffff;
+}
+
+button:focus {
+  outline: none;
+}
+
+input{
+  border: none; /* remove the border */
+  padding: 10px; /* adjust the padding */
+  font-size: 10px; /* keep the font size */
+  resize: none; /* keep the textarea non-resizable */
+  text-indent: 0; /* keep the text aligned to the left */
+  box-sizing:border-box; /* keep the textarea including padding and border in the total width and height */
+  background-color: #ebebeb; /* add a light background color */
+  font-family: Arial, sans-serif; /* change the font */
+  line-height: 1.5; /* adjust the line height */
+  border-radius: 4px; /* add rounded corners */
+  width: 30%; /* make the textarea take up 60% of its container width */
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1); /* add a subtle box shadow */
+  margin: 0 auto; /* center the textarea horizontally */
+  display: block;
+}
+
+#fade-in-text {
+  opacity: 0;
+  animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div id="fade-in-text">
+    <p>Emotion</p>
+  
+  <p2>
+    
+    Augenkontakt haltend, wie Kinder miteinander spielend, <br></br>
+    drängen sie sich gegenseitig Richtung Aufzug. <br></br>
+    Doch sie sind keine Kinder mehr. <br></br>
+    Ihre lüsternen Absichten brennen sich, <br></br>
+    mit jedem Wort, jeder Berührung,<br></br>
+    tiefer in sein Bewusstsein ein.<br></br>
+    Die erregte Spannung liegt, wie ihr von Hormonen erfüllter Duft, in der Luft. <br></br>
+    Sie nimmt ihm beim Arm, zieht ihn in den Aufzug hinein. <br></br>
+    Gerade genug Platz. <br></br>
+    Eng gedrängt, jeder Gedanke verdrängt, lediglich der Moment. <br></br>
+    Noch bevor sich die Tür vollends schliesst, liegen seine Lippen bereits auf den ihrigen. <br></br>
+    Doch nicht ganz, trotz den alles einzunehmen scheinenden Wellen an Erregung hält er kurz vor ihren Lippen inne. <br></br>
+    Bewundert aus der Nähe ihre feinen Gesichtszüge, von Meisterhand, geschliffen aus Elfenbein, <br></br>
+    Nase süss, leicht spitz und dennoch flach im Profil, er dreht ihr Gesicht sanft zur Seite, hohe gesunde Wangen, edel geformte Lippen schliessen seine Erkundung ihrer Gesichtszüge ab. <br></br>
+    Sie geniesst die Aufmerksamkeit, ihre funkelnden Augen seitwärts gerichtet, erwartet geduldig seine Beurteilung. <br></br>
+    Seine Lippen berühren die ihrigen. <br></br>
+    Bestätigen ihr, Erkenntnis gewonnen aus Erkundung. <br></br>
+    Sie erwidert, spielend beisst er ihre Unterlippe, ein tiefes Atmen verlässt sie, seine Zunge nun an ihrem Ohrläppchen, die Seite ihres Halses liebkosend. Sie lacht auf, ihre Gesichter wieder gleichauf. <br></br>
+    In ihren Augen findet er die Euphorie, die Ekstase in die sie sich gegenseitig gezogen haben. <br></br>
+    Das helle Geräusch des haltenden Aufzugs holt sie in die Realität zurück. <br></br>
+    Die Türen öffnen sich... <br></br>
+    
+
+  </p2>
+</div>
+  <form
+  action="https://formspree.io/f/xwkjpeyo"
+  method="POST"
+>
+
+  <label>
+    Schreibe die Szene weiter:
+    <textarea name="message" id="myTextArea"></textarea>
+  </label>
+  <label>
+    E-Mail Adresse: 
+    </label>
+    <input type="email" name="email">
+  </label>
+
+  <!-- your other form fields go here -->
+  <button type="submit">💌</button>
+  </button>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var textarea = document.getElementById("myTextArea");
+    textarea.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = (this.scrollHeight) + 'px';
+    });
+  });
+
+
+
+
+
+</script>
+</body>
+</html>

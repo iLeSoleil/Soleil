@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <p>Welcome !</p>
+      <p2>choose wisely ...</p2>
+    </header>
+
+
+
+
+    <button id="emotionbutton" class="emotionbutton" onclick="location.href='emotion.html'">Emotion</button>
+    <button id="logicbutton" class="logicbutton" onclick="location.href='loading.html'">Logic</button>
+
+    <script>
+        document.getElementById("logicbutton").addEventListener("click", function() {
+  // Show the loading screen
+  document.getElementById("loading-screen").style.display = "flex";
+});
+document.getElementById("logicbutton").addEventListener("click", function() {
+  // Show the loading screen
+  document.getElementById("loading-screen").style.display = "flex";
+  // Simulate loading time
+  setTimeout(function() {
+    // Hide the loading screen
+    document.getElementById("loading-screen").style.display = "none";
+    window.location.href = "loading.html";
+  }, 2000);
+});
+
+
+
+
+
+
+
+// Get the button elements
+let emotionbutton = document.getElementById("emotionbutton");
+let logicbutton = document.getElementById("logicbutton");
+
+// Check if button1 has been clicked before
+if (getCookie("emotionbuttonClicked") === "true") {
+  logicbutton.disabled = true;
+}
+
+// Check if button2 has been clicked before
+if (getCookie("logicbuttonClicked") === "true") {
+  emotionbutton.disabled = true;
+}
+
+// Add a click event listener to button1
+emotionbutton.addEventListener("click", function() {
+  // Disable button1 and button2
+  emotionbutton.disabled = true;
+  logicbutton.disabled = true;
+  // Save the button1Clicked flag in a cookie
+  setCookie("emotionbuttonClicked", "true", 30); // expires in 30 days
+  // Do something when button1 is clicked
+  // ...
+});
+
+// Add a click event listener to button2
+logicbutton.addEventListener("click", function() {
+  // Disable button1 and button2
+  emotionbutton.disabled = true;
+  logicbutton.disabled = true;
+  // Save the button2Clicked flag in a cookie
+  setCookie("logicbuttonClicked", "true", 30); // expires in 30 days
+  // Do something when button2 is clicked
+  // ...
+});
+
+// Function to get a cookie value
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+// Function to set a cookie value
+function setCookie(cname, cvalue, exdays) {
+  let d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
